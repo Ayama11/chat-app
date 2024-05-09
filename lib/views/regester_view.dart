@@ -8,7 +8,7 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:teste/bloc/auth_bloc.dart';
 
 import 'package:teste/helper/snakbar.dart';
-import 'package:teste/login_view.dart';
+import 'package:teste/views/login_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RegisterView extends StatefulWidget {
@@ -68,20 +68,23 @@ class _RegisterViewState extends State<RegisterView> {
                       const SizedBox(
                         height: 20,
                       ),
-                      TextFormField(
-                        validator: (value) {
-                          if (value!.isEmpty) {
-                            return 'Field is required';
-                          }
-                          return null;
-                        },
-                        onChanged: (value) {
-                          password = value;
-                        },
-                        decoration: const InputDecoration(
-                            hintText: 'password',
-                            enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.blue))),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: TextFormField(
+                          validator: (value) {
+                            if (value!.isEmpty) {
+                              return 'Field is required';
+                            }
+                            return null;
+                          },
+                          onChanged: (value) {
+                            password = value;
+                          },
+                          decoration: const InputDecoration(
+                              hintText: 'password',
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.blue))),
+                        ),
                       ),
                       const SizedBox(
                         height: 20,

@@ -5,10 +5,10 @@ import 'package:get/get.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:teste/auth_cubit/auth_cubit.dart';
 
-import 'package:teste/chat_view.dart';
+import 'package:teste/views/chat_view.dart';
 import 'package:teste/cubits/login_cubit/chat/chat_cubit.dart';
 
-import 'helper/snakbar.dart';
+import '../helper/snakbar.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class LoginView extends StatefulWidget {
@@ -95,7 +95,7 @@ class _LoginViewState extends State<LoginView> {
                           .login(email: email!, password: password!);
                     }
                   },
-                  child: const Text('register'),
+                  child: const Text('Log in'),
                 ),
               ],
             ),
