@@ -53,7 +53,7 @@ class _RegisterViewState extends State<RegisterView> {
                       TextFormField(
                         validator: (value) {
                           if (value!.isEmpty) {
-                            return ' null dont';
+                            return 'Field is required';
                           }
                           return null;
                         },
@@ -71,7 +71,7 @@ class _RegisterViewState extends State<RegisterView> {
                       TextFormField(
                         validator: (value) {
                           if (value!.isEmpty) {
-                            return ' null dont';
+                            return 'Field is required';
                           }
                           return null;
                         },

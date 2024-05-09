@@ -1,6 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter/foundation.dart';
+
 import 'package:teste/helper/consts.dart';
 import 'package:teste/models/message_model.dart';
 
@@ -19,6 +20,7 @@ class ChatCubit extends Cubit<ChatState> {
         kCreatat: DateTime.now(),
         kEmail: email,
       });
+      // ignore: empty_catches
     } on Exception {}
   }
 

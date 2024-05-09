@@ -11,14 +11,19 @@ import 'package:teste/cubits/login_cubit/chat/chat_cubit.dart';
 import 'helper/snakbar.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class LoginView extends StatelessWidget {
+class LoginView extends StatefulWidget {
+  const LoginView({super.key});
+
+  @override
+  State<LoginView> createState() => _LoginViewState();
+}
+
+class _LoginViewState extends State<LoginView> {
   bool isLoding = false;
 
   String? email, password;
 
   GlobalKey<FormState> keyfor = GlobalKey();
-
-  LoginView({super.key});
 
   @override
   Widget build(BuildContext context) {
